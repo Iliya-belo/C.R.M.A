@@ -1,0 +1,464 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{7CADE987-FA03-4BE0-B290-3615EB8E73A4}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>FinalProject</RootNamespace>
+    <AssemblyName>FinalProject</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MySql.Data">
+      <HintPath>..\..\..\..\..\..\Users\Felix\Desktop\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CEO\AddCarToWorker.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CEO\AddCarToWorker.Designer.cs">
+      <DependentUpon>AddCarToWorker.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CEO\exceptionsList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CEO\exceptionsList.Designer.cs">
+      <DependentUpon>exceptionsList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CEO\monthlyExecptionsHours.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CEO\monthlyExecptionsHours.Designer.cs">
+      <DependentUpon>monthlyExecptionsHours.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CEO\ReturnCar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CEO\ReturnCar.Designer.cs">
+      <DependentUpon>ReturnCar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CEO\SendPurporseOfCar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CEO\SendPurporseOfCar.Designer.cs">
+      <DependentUpon>SendPurporseOfCar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Classes\Candidate.cs" />
+    <Compile Include="Classes\Car.cs" />
+    <Compile Include="Classes\Contract.cs" />
+    <Compile Include="Classes\Costumer.cs" />
+    <None Include="ClassDiagram1.cd" />
+    <None Include="Classes\Document.cs" />
+    <None Include="Classes\Driver.cs" />
+    <Compile Include="Classes\Employee.cs" />
+    <Compile Include="CEO\listOfCarsToBeApproved.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CEO\listOfCarsToBeApproved.Designer.cs">
+      <DependentUpon>listOfCarsToBeApproved.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CEO\listOfMeetings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CEO\listOfMeetings.Designer.cs">
+      <DependentUpon>listOfMeetings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CEO\mainCEO.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CEO\mainCEO.Designer.cs">
+      <DependentUpon>mainCEO.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Classes\ExceptionHours.cs" />
+    <Compile Include="Classes\Garage.cs" />
+    <Compile Include="Classes\hashing.cs" />
+    <None Include="Classes\InsuranceCompany.cs" />
+    <Compile Include="Classes\Lot.cs" />
+    <None Include="Classes\Management.cs" />
+    <Compile Include="Classes\ManagerSettings.cs" />
+    <Compile Include="Classes\Mission.cs" />
+    <Compile Include="Classes\MissionList.cs" />
+    <Compile Include="Classes\Request.cs" />
+    <None Include="Classes\Secretary.cs" />
+    <None Include="Classes\Tester.cs" />
+    <Compile Include="Database\DBConnection.cs" />
+    <Compile Include="Database\DbMySQL.cs" />
+    <Compile Include="Database\LogIn.cs" />
+    <Compile Include="Driver\DriverMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Driver\DriverMain.Designer.cs">
+      <DependentUpon>DriverMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Classes\email.cs" />
+    <Compile Include="Driver\Images.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Driver\Images.Designer.cs">
+      <DependentUpon>Images.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Driver\Job.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Driver\Job.Designer.cs">
+      <DependentUpon>Job.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Driver\MissionsList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Driver\MissionsList.Designer.cs">
+      <DependentUpon>MissionsList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Driver\PakingDiagramAndInsert.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Driver\PakingDiagramAndInsert.Designer.cs">
+      <DependentUpon>PakingDiagramAndInsert.cs</DependentUpon>
+    </Compile>
+    <Compile Include="JobManager\addMission.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="JobManager\addMission.Designer.cs">
+      <DependentUpon>addMission.cs</DependentUpon>
+    </Compile>
+    <Compile Include="JobManager\exceptionsList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="JobManager\exceptionsList.Designer.cs">
+      <DependentUpon>exceptionsList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="JobManager\missionList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="JobManager\missionList.Designer.cs">
+      <DependentUpon>missionList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="JobManager\monthlyExecptionsHours.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="JobManager\monthlyExecptionsHours.Designer.cs">
+      <DependentUpon>monthlyExecptionsHours.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Secretary\addCar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Secretary\addCar.Designer.cs">
+      <DependentUpon>addCar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Secretary\addEmployee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Secretary\addEmployee.Designer.cs">
+      <DependentUpon>addEmployee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Secretary\addFault.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Secretary\addFault.Designer.cs">
+      <DependentUpon>addFault.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Secretary\addMeeting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Secretary\addMeeting.Designer.cs">
+      <DependentUpon>addMeeting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Secretary\ChengePurporseCar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Secretary\ChengePurporseCar.Designer.cs">
+      <DependentUpon>ChengePurporseCar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Secretary\ListOfCarAfterFixToPaed.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Secretary\ListOfCarAfterFixToPaed.Designer.cs">
+      <DependentUpon>ListOfCarAfterFixToPaed.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Secretary\MainSecretaryForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Secretary\MainSecretaryForm.Designer.cs">
+      <DependentUpon>MainSecretaryForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Secretary\listOfPurchasedCars.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Secretary\listOfPurchasedCars.Designer.cs">
+      <DependentUpon>listOfPurchasedCars.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Secretary\Payment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Secretary\Payment.Designer.cs">
+      <DependentUpon>Payment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Secretary\updateEmployeeInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Secretary\updateEmployeeInfo.Designer.cs">
+      <DependentUpon>updateEmployeeInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SellerOrRenter\ContractDocument.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SellerOrRenter\ContractDocument.Designer.cs">
+      <DependentUpon>ContractDocument.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SellerOrRenter\Frm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SellerOrRenter\Frm.Designer.cs">
+      <DependentUpon>Frm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SellerOrRenter\Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SellerOrRenter\Main.Designer.cs">
+      <DependentUpon>Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SellerOrRenter\PreaparationOfTheCar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SellerOrRenter\PreaparationOfTheCar.Designer.cs">
+      <DependentUpon>PreaparationOfTheCar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Shared Forms\CarHistory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Shared Forms\CarHistory.Designer.cs">
+      <DependentUpon>CarHistory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tester_SafetyManager\AddGarageItem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tester_SafetyManager\AddGarageItem.Designer.cs">
+      <DependentUpon>AddGarageItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tester_SafetyManager\insertCarToGarage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tester_SafetyManager\insertCarToGarage.Designer.cs">
+      <DependentUpon>insertCarToGarage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tester_SafetyManager\InsertForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tester_SafetyManager\InsertForm.Designer.cs">
+      <DependentUpon>InsertForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tester_SafetyManager\listOfRepairedCars.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tester_SafetyManager\listOfRepairedCars.Designer.cs">
+      <DependentUpon>listOfRepairedCars.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tester_SafetyManager\monthlyExecptionsHours.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tester_SafetyManager\monthlyExecptionsHours.Designer.cs">
+      <DependentUpon>monthlyExecptionsHours.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tester_SafetyManager\TSMMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tester_SafetyManager\TSMMain.Designer.cs">
+      <DependentUpon>TSMMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tester_SafetyManager\updateRepairedParts.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tester_SafetyManager\updateRepairedParts.Designer.cs">
+      <DependentUpon>updateRepairedParts.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="CEO\AddCarToWorker.resx">
+      <DependentUpon>AddCarToWorker.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CEO\exceptionsList.resx">
+      <DependentUpon>exceptionsList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CEO\listOfCarsToBeApproved.resx">
+      <DependentUpon>listOfCarsToBeApproved.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CEO\listOfMeetings.resx">
+      <DependentUpon>listOfMeetings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CEO\mainCEO.resx">
+      <DependentUpon>mainCEO.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CEO\monthlyExecptionsHours.resx">
+      <DependentUpon>monthlyExecptionsHours.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CEO\ReturnCar.resx">
+      <DependentUpon>ReturnCar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CEO\SendPurporseOfCar.resx">
+      <DependentUpon>SendPurporseOfCar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Driver\DriverMain.resx">
+      <DependentUpon>DriverMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Driver\Images.resx">
+      <DependentUpon>Images.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Driver\Job.resx">
+      <DependentUpon>Job.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Driver\MissionsList.resx">
+      <DependentUpon>MissionsList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Driver\PakingDiagramAndInsert.resx">
+      <DependentUpon>PakingDiagramAndInsert.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JobManager\addMission.resx">
+      <DependentUpon>addMission.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JobManager\exceptionsList.resx">
+      <DependentUpon>exceptionsList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JobManager\missionList.resx">
+      <DependentUpon>missionList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JobManager\monthlyExecptionsHours.resx">
+      <DependentUpon>monthlyExecptionsHours.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Secretary\addCar.resx">
+      <DependentUpon>addCar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Secretary\addEmployee.resx">
+      <DependentUpon>addEmployee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Secretary\addFault.resx">
+      <DependentUpon>addFault.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Secretary\addMeeting.resx">
+      <DependentUpon>addMeeting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Secretary\ChengePurporseCar.resx">
+      <DependentUpon>ChengePurporseCar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Secretary\ListOfCarAfterFixToPaed.resx">
+      <DependentUpon>ListOfCarAfterFixToPaed.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Secretary\MainSecretaryForm.resx">
+      <DependentUpon>MainSecretaryForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Secretary\listOfPurchasedCars.resx">
+      <DependentUpon>listOfPurchasedCars.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Secretary\Payment.resx">
+      <DependentUpon>Payment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Secretary\updateEmployeeInfo.resx">
+      <DependentUpon>updateEmployeeInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SellerOrRenter\ContractDocument.resx">
+      <DependentUpon>ContractDocument.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SellerOrRenter\Frm.resx">
+      <DependentUpon>Frm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SellerOrRenter\Main.resx">
+      <DependentUpon>Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SellerOrRenter\PreaparationOfTheCar.resx">
+      <DependentUpon>PreaparationOfTheCar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Shared Forms\CarHistory.resx">
+      <DependentUpon>CarHistory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tester_SafetyManager\AddGarageItem.resx">
+      <DependentUpon>AddGarageItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tester_SafetyManager\insertCarToGarage.resx">
+      <DependentUpon>insertCarToGarage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tester_SafetyManager\InsertForm.resx">
+      <DependentUpon>InsertForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tester_SafetyManager\listOfRepairedCars.resx">
+      <DependentUpon>listOfRepairedCars.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tester_SafetyManager\monthlyExecptionsHours.resx">
+      <DependentUpon>monthlyExecptionsHours.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tester_SafetyManager\TSMMain.resx">
+      <DependentUpon>TSMMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tester_SafetyManager\updateRepairedParts.resx">
+      <DependentUpon>updateRepairedParts.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
